@@ -10,5 +10,10 @@ jobs:
         run: |
           node -v
           npm -v
-          
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Check Ubuntu Version
+       run: cat /etc/*release*
+
         
