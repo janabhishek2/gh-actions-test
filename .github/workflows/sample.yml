@@ -13,7 +13,13 @@ jobs:
   job2:
     runs-on: ubuntu-latest
     steps:
-     - name: Check Ubuntu Version
-       run: cat /etc/*release*
+     - name: Basic commands
+       run: |
+         cat /etc/*release*
+         python -v
+         node -v
+         npm -v
+         pwd
+
 
         
