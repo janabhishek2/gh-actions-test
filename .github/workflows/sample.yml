@@ -14,12 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Basic commands
-       run: |
-         cat /etc/*release*
-         python -v
-         node -v
-         npm -v
-         pwd
-
+       run: pwd
 
         
