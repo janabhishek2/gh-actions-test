@@ -9,6 +9,12 @@ jobs:
           pwd
           ls
           git --version
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo "${{ github.token }}}"
+          # git clone git@github.com:$GITHUB_REPOSITORY
+          # git checkout $GITHUB_SHA
+          # git status
       - name: List files before checkout
         run: |
           pwd
@@ -20,6 +26,7 @@ jobs:
         run: |
           pwd
           ls
+          git status
       - name: Simple JS action
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
