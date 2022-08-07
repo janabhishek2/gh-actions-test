@@ -15,5 +15,10 @@ jobs:
     steps:
      - name: Basic commands
        run: pwd
+     - name: Python commands
+       run: |
+         import platform
+         print(platform.processor())
+       shell: python
 
         
