@@ -19,6 +19,7 @@ jobs:
         run: |
           pwd
           ls
+          git status
       - name: checkout action
         uses: actions/checkout@v1
         id: checkout
