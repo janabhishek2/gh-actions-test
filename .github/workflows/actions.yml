@@ -1,5 +1,5 @@
-name: Github actions test
-on : [push]
+name: Github Actions Workflow
+on : [push, pull_request]
 jobs:
   github-action:
     runs-on: ubuntu-latest
