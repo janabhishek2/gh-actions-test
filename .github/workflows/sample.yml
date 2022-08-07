@@ -19,7 +19,7 @@ jobs:
        run: |
          import platform
          print(platform.processor())
-         pyhton -v
+         python -v
        shell: python
 
         
