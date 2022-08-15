@@ -1,0 +1,14 @@
+name: Issue Workflow
+on:
+  issues:
+    types: [opened,closed]
+jobs:
+  basic-commands-to-run-on-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Github repository name
+        run: echo $GITHUB_REPOSITORY
+      - name: Github SHA
+        run : echo $GITHUB_SHA
+
+          
