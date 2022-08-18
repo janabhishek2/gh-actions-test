@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Get directory info
         run: |
-          echo "Current directory : \n" && pwd
-          echo "Current folders and files : \n" && ls -a 
+          pwd 
+          ls
       - name: Get git details
         run: |
           echo $GITHUB_SHA
