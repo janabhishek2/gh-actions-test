@@ -1,7 +1,13 @@
 name: cron-schedule-workflow
 on:
+<<<<<<< HEAD
+  pull_request:
+  # schedule:
+  #   - cron: "0/10 * * * *"
+=======
   schedule:
     - cron: "0/10 * * * *"
+>>>>>>> main
 jobs:
   get-basic-info:
     runs-on: ubuntu-latest
