@@ -1,5 +1,7 @@
 name: Practice Workflow
-on: [push]
+on:
+  push:
+    branches: [dev]
 jobs:
   standard-actions:
     runs-on: ubuntu-latest
