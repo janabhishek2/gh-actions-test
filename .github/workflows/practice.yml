@@ -1,0 +1,17 @@
+name: Practice Workflow
+on:
+  push:
+    branches: [dev]
+jobs:
+  standard-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Basic list commands
+        run: |
+          pwd
+          ls
+          git --version
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_TOKEN
+          
