@@ -36,8 +36,8 @@ jobs:
           echo "GITHUB_WORKSPACE ${GITHUB_WORKSPACE}"
           echo "GITHUB_SHA ${GITHUB_SHA}"
           echo "GITHUB_REF ${GITHUB_REF}"
-          echo "GIThUB_TOKEN" ${{ github.env }}
-
+          echo "GIThUB_TOKEN" ${{ github.token }}
+          echo "Github Secrets: ${{ secrets.WF_ENV }}"
 
 
     
