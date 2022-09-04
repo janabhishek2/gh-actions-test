@@ -19,12 +19,11 @@ jobs:
           git checkout main
           git pull
           ls -a
-          echo $RANDOM || "\n" >> random.txt
+          echo $RANDOM >> random.txt
+          ls -a
           git add .
           git commit -m "Adding random number"
           git push origin main
-          pwd 
-          ls -a
       - name: Create issue using REST API
         run: |
           curl --request POST \
