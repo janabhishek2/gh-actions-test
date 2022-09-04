@@ -28,6 +28,7 @@ jobs:
     steps:
       - name: Log default variables
         run: |
+          echo "HOME ${HOME}"
           echo "GITHUB_WORKFLOW ${GITHUB_WORKFLOW}"
           echo "GITHUB_ACTION ${GITHUB_ACTION}"
           echo "GITHUB_REPOSITORY ${GITHUB_REPOSITORY}"
@@ -35,7 +36,7 @@ jobs:
           echo "GITHUB_WORKSPACE ${GITHUB_WORKSPACE}"
           echo "GITHUB_SHA ${GITHUB_SHA}"
           echo "GITHUB_REF ${GITHUB_REF}"
-          
+
 
 
     
