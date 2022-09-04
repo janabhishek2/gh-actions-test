@@ -1,0 +1,13 @@
+name: Create PR label
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  create-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+     
