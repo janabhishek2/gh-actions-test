@@ -6,25 +6,25 @@ on:
 env:
   WF_ENV: Available to all jobs
 jobs:
-  create_issue:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout to git repo
-        id : checkout
-        uses: actions/checkout@v3
-      - name: Push a random file to repo
-        run: |
-          git checkout main
-          git pull
-          pwd
-          ls -a
-          echo $RANDOM >> random.txt
-          ls -a
-          git config --global user.name "gh-bot"
-          git config --global user.email "janahishek2@gmail.com"
-          git add .
-          git commit -m "Adding random number"
-          git push origin main
+  # random-push-to-main:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout to git repo
+  #       id : checkout
+  #       uses: actions/checkout@v3
+  #     - name: Push a random file to repo
+  #       run: |
+  #         git checkout main
+  #         git pull
+  #         pwd
+  #         ls -a
+  #         echo $RANDOM >> random.txt
+  #         ls -a
+  #         git config --global user.name "gh-bot"
+  #         git config --global user.email "janahishek2@gmail.com"
+  #         git add .
+  #         git commit -m "Adding random number"
+  #         git push origin main
       # - name: Create issue using REST API
       #   run: |
       #     curl --request POST \
