@@ -13,7 +13,6 @@ jobs:
         id : checkout
         uses: actions/checkout@v3
       - name: Push a random file to repo
-        uses: checkout
         run: |
           git checkout main
           git pull
