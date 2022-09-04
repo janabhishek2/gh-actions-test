@@ -13,5 +13,5 @@ jobs:
           git --version
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
-          echo $GITHUB_TOKEN
+          echo "${{ github.token }}}"
           
