@@ -39,6 +39,7 @@ jobs:
           echo "GIThUB_TOKEN" ${{ github.token }}
           echo "Github Secrets: ${{ secrets.WF_ENV }}"
           echo "Secrets Github token" ${{ secrets.GITHUB_TOKEN }}
+          echo ${{secrets.GITHUB_TOKEN}} == {{github.token}}
 
 
     
