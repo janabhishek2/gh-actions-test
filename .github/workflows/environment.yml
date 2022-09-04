@@ -9,17 +9,15 @@ jobs:
   create_issue:
     runs-on: ubuntu-latest
     steps:
-      - name: Push a random file
+      - name: Checkout to git repo
+        id : checkout
+        uses: actions/checkout@v3
+      - name: Push a random file to repo
+        uses: checkout
         run: |
-          pwd
-          ls -a
-          git init
-          git remote add origin git@github.com:${GITHUB_REPOSITORY}.git
-          git config --global user.email "janabhishek2@gmail.com"
-          git config --global user.name "GH-actions bot"
-          git fetch 
           git checkout main
           git pull
+          pwd
           ls -a
           echo $RANDOM >> random.txt
           ls -a
