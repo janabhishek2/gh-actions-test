@@ -9,6 +9,22 @@ jobs:
   create_issue:
     runs-on: ubuntu-latest
     steps:
+      - name: Push a random file
+        run: |
+          git init
+          git remote add origin https://${GITHUB_ACTOR}:{{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
+          git config --global user.email "janabhishek2@gmail.com"
+          git config --global user.name "GH-actions bot"
+          git fetch 
+          git checkout main
+          git pull
+          ls -a
+          echo $RANDOM || "\n" >> random.txt
+          git add .
+          git commit -m "Adding random number"
+          git push origin main
+          pwd 
+          ls -a
       - name: Create issue using REST API
         run: |
           curl --request POST \
