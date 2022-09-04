@@ -6,6 +6,12 @@ on:
 env:
   WF_ENV: Available to all jobs
 jobs:
+  create-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
   create_issue:
     runs-on: ubuntu-latest
     steps:
