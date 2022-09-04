@@ -20,6 +20,8 @@ jobs:
           ls -a
           echo $RANDOM >> random.txt
           ls -a
+          git config --global user.name "gh-bot"
+          git config --global user.email "janahishek2@gmail.com"
           git add .
           git commit -m "Adding random number"
           git push origin main
